@@ -1,0 +1,1527 @@
+Information in this document is subject to change without notice and does not represent a commitment on the part of BandLab Technologies. The software
+described in this document is furnished under a license agreement or nondisclosure agreement. The software may be used or copied only in accordance with
+the terms of the agreement. It is against the law to copy this software on any medium except as specifically allowed in the agreement. No part of this document
+may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying and recording, for any purpose without the
+express written permission of BandLab Technologies.
+
+Copyright © 2022 BandLab Technologies. All rights reserved.
+
+Program Copyright © 2022 BandLab Technologies. All rights reserved.
+
+Cakewalk is a registered trademark of BandLab Technologies and the Cakewalk logo are trademarks of BandLab Technologies. Other company and product
+names are trademarks of their respective owners.
+
+Visit Cakewalk on the World Wide Web at www.cakewalk.com.
+
+Visit the official Cakewalk user forum at discuss.cakewalk.com.
+
+Visit BandLab on the World Wide Web at www.bandlab.com.
+
+To get Cakewalk by BandLab for free, please visit www.bandlab.com/products/cakewalk.
+
+Version 27.12.00
+
+Table of contents
+43
+
+New features
+
+48
+50
+50
+51
+53
+56
+59
+66
+67
+68
+68
+69
+70
+72
+74
+75
+76
+80
+81
+83
+86
+87
+87
+89
+90
+95
+97
+98
+99
+100
+104
+105
+106
+107
+107
+107
+108
+109
+109
+
+Nested track folders
+Misc. enhancements
+Solo, Exclusive Solo and Solo Override improvements
+Export enhancements
+Redesigned Export Audio dialog
+Batch exporting audio files using task queues
+Using export filename tags and presets
+Default ‘Export Audio Files’ folder
+Improved handling of aux tracks and sidechains when exporting or soloing tracks
+Automatic effects tails flushing during bounce
+‘Use These Settings for All’ option for MP3 and WMA export
+Toast notification with link to open export location
+Improved AudioSnap transient detection
+Misc. enhancements
+Improved input/output port naming for hardware and software ports
+Improved dropout management
+Misc enhancements
+Optimizations
+Integrated BandLab library access
+Tempo track and Tempo Inspector
+PC2A T-Type Leveling Amplifier ProChannel module
+Loop current arrangement
+Convert between MIDI continuous controller (CC) events and automation envelopes
+Optimizations
+Misc enhancements
+Arranger section inclusion of outlying MIDI notes
+Absolute time in Arranger tracks
+SSO (Single Sign-On) for Cakewalk activation
+Optimizations
+Misc enhancements
+Articulation Maps
+In-app activation/refresh
+VST instruments can use custom instrument definitions
+ARA/Melodyne algorithm picker
+Piano Roll view enhancement
+VST3 enhancements
+Misc. enhancements
+Optimizations
+Automatic Picture Cache management
+
+3
+
+110
+110
+116
+122
+125
+126
+128
+129
+131
+132
+132
+133
+136
+137
+138
+139
+139
+140
+141
+143
+144
+146
+148
+150
+150
+151
+152
+153
+156
+157
+158
+160
+161
+161
+162
+163
+165
+166
+167
+168
+168
+169
+171
+172
+174
+174
+175
+175
+176
+4
+
+In-app updater
+Multiple Arranger tracks
+Arranger section types
+Arranger templates
+Show and edit MIDI automation on Instrument tracks
+Enhanced ‘Instrument Track Per Audio Output’
+Workspace enhancements
+Classic Creative Suite audio effects
+Channel Tools plug-in
+New FX Chain presets
+Export to Standard MIDI File
+Misc. changes
+Dynamic waveform scaling when changing clip automation
+Offline activation
+Mono plug-in support changes
+Improved mouse wheel handling
+Misc. UI enhancements
+Arranger track
+ProChannel module presets
+Copy/paste settings between ProChannel modules
+Append per-output Instrument tracks
+Misc. changes
+Multi-timbral soft synth enhancements
+Show/hide Aim Assist text in Time Ruler
+CPU metrics in Performance module
+Experimental aggressive task scheduling model
+ASIO improvements
+Workspace (Lens) enhancements
+Tool changes
+Show/hide muted takes in parent track
+Instrument support for Mackie Control surface
+Simpler activation
+Misc. UI changes
+Optimizations
+Duplicate Selected Clip(s)
+Take lane enhancements
+Editing enhancements
+Piano Roll enhancements
+Plug-in enhancements
+Auto Crossfade toggle in Track view
+Improved Reset/Panic
+Mackie Control enhancements
+Improved audio dropout diagnosis
+Play List enhancements
+Insert Audio track and MIDI track shortcuts
+Updated transport behaviors
+Updated ‘Basic’ Workspace
+Improved compatibility with older SONAR WRK files
+Comping and Take lane enhancements
+
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+192
+192
+193
+196
+197
+198
+202
+204
+205
+206
+206
+206
+207
+208
+209
+210
+212
+214
+215
+216
+217
+218
+219
+220
+
+Smart tool customization
+Center Control Bar modules
+Help Module info for clips
+Selection markers in time ruler
+Loop and Punch marker enhancements
+Show audio/MIDI device change notifications
+ARA 2 support
+Multi-clip slip stretching
+Instrument track Input Gain parameter
+Updated zplane élastique v3 audio stretching and pitch shifting
+Arpeggiator Rate Lock toggle
+BandLab import and export (preview feature)
+Ripple Edit indicator
+New user forum
+Export Control Bar module / Publish to BandLab
+BREVERB 2 Cakewalk
+TH3 Cakewalk Edition amp simulator
+zplane élastique audio stretching and pitch shifting
+Specify default stretch methods in Preferences dialog
+Customize Project Open notification affirmations
+Show/hide toast notifications
+Status update while loading projects
+Rename Clip context menu command
+Double-clicking audio clips opens the Clip Properties Inspector
+Aim Assist enhancements
+Note draw duration buttons
+Improved continuous controller drawing
+VST Scan enhancements
+Show custom channel strip colors in all themes
+Phase and Mono/Stereo Interleave buttons in Track view
+Enable/disable Auto Track Focus in Piano Roll view
+Move/copy notes between tracks in Piano Roll view
+Language switching
+Clean Audio Folder enhancements
+Apply settings from a track template to an existing track
+Dark Piano Roll view with Tungsten theme
+
+5
+
+221
+
+Beginner’s guide to Cakewalk software
+
+222
+223
+224
+224
+226
+227
+227
+229
+230
+231
+232
+232
+236
+237
+237
+238
+239
+
+MIDI
+MIDI channels, interfaces, inputs, and outputs
+MIDI drivers
+MIDI files, projects, tracks, and clips
+Controlling which sounds you hear
+Audio
+Audio playback in Cakewalk
+Tracks
+Clips
+Track-by-track playback
+Audio recording
+Connecting an instrument, home stereo, or microphone to your sound card
+Choosing inputs
+Audio hardware (sound cards) and drivers
+Consumer and professional
+How do I know if I have a hardware conflict?
+Installation and drivers
+
+241
+
+Introduction
+
+241
+241
+242
+242
+242
+242
+242
+243
+243
+243
+243
+244
+244
+245
+246
+246
+249
+250
+252
+255
+255
+256
+256
+269
+270
+272
+273
+274
+276
+
+About Cakewalk
+Publish
+Music composition and exploration
+Remixing
+Game sound development
+Sound production and engineering
+Web authoring
+Film and video scoring and production
+Publishing music on the internet
+Burning audio CDs
+Flexibility
+Computers, sound and music
+MIDI
+Digital audio
+Setup
+Audio connections
+MIDI connections
+Changing I/O devices
+Starting Cakewalk
+Cakewalk basics
+Cakewalk file types
+Opening a file
+Views
+Working on a project
+UI themes
+Cakewalk Theme Editor
+Screen colors and wallpaper
+Color presets
+Installing Cakewalk
+
+6
+
+281
+
+Controlling playback
+
+282
+284
+285
+286
+287
+289
+291
+291
+293
+296
+297
+298
+299
+300
+301
+301
+302
+302
+303
+312
+313
+315
+315
+317
+318
+319
+319
+320
+320
+321
+321
+322
+322
+327
+329
+329
+330
+331
+333
+334
+336
+337
+338
+339
+341
+342
+343
+343
+343
+344
+344
+
+The Now time and how to use it
+The Now time marker
+The Track view Now Time display
+Displaying the Now time in large print
+The Time ruler
+Controlling the transport
+Handling stuck notes
+Looping
+Using the Transport, Markers, Punch and Loop modules
+Track-by-track playback
+The Mix module
+Silencing tracks
+Soloing tracks
+Dim Solo mode
+Exclusive Solo mode
+Solo Override
+Inverting the phase of a track
+Changing tracks’ mono/stereo status
+Changing track settings
+Setting up output devices
+Assigning Inputs & Outputs
+Assigning tracks to mono hardware outputs
+Choosing the instrument sound (bank and patch)
+Adding effects
+Adjusting volume and pan
+Configuring panning laws
+Adjusting volume trim
+Assigning a MIDI channel (Chn)
+Adjusting the Key/transposing a track (Key+)
+Adjusting the note velocity (Vel+)
+Adjusting the time alignment of a MIDI track (Time+)
+Other MIDI playback settings
+Customizing track/bus colors
+Controlling live MIDI playback - MIDI echo
+Local control
+Playing files in sequence with the Play List
+The Play List interface
+Using the Play List
+Video playback, import, and export
+Importing and playing back videos
+Exporting video
+Uploading your songs to YouTube
+Optimizing video performance
+Using the Video Thumbnails pane
+Video playback on a FireWire DV device
+Exporting a project to a FireWire DV device
+Synchronizing external video playback to audio
+Locating missing audio
+The Find Missing Audio dialog
+Restoring missing audio files
+Managing shared and external files
+
+7
+
+345
+
+Recording
+
+346
+346
+347
+348
+350
+350
+351
+352
+352
+353
+355
+355
+356
+356
+357
+358
+360
+362
+363
+364
+367
+368
+368
+370
+373
+377
+378
+379
+380
+381
+381
+383
+383
+384
+385
+385
+386
+
+Creating a new project
+Creating a new project file
+Setting the Meter and Key signatures
+Setting the Metronome and Tempo settings
+Setting the audio sampling rate and bit depth
+Sony Wave-64 support
+Setting the MIDI timing resolution
+Preparing to record
+Recording modes
+Choosing an input
+Arming tracks for recording
+Auto arming
+Arming tracks during playback/recording
+Recording music from a MIDI instrument
+Input quantizing
+Arpeggiator
+Using the arpeggiator
+Recording audio
+Confidence recording and waveform preview
+Input monitoring
+Live Input PDC override
+The Audio Engine button
+Loop recording
+Punch recording
+Step recording
+Step record keyboard Shortcuts
+Step pattern recording
+Recording specific ports and channels
+Input filtering
+Importing music and sound
+Importing audio files
+Importing audio CD Tracks
+Importing material from another Cakewalk project
+Importing OMF projects
+Importing MIDI files
+Importing audio / MIDI files from the Clips pane
+Saving your work
+
+389
+
+Tempo
+
+390
+394
+395
+398
+400
+402
+413
+415
+416
+418
+419
+421
+423
+425
+8
+
+How tempo changes affect audio clips
+How tempo changes affect automation
+Tempo track
+Tempo Inspector
+Changing tempos
+Using the Tempo track
+Using the Tempo Inspector
+Using the Transport module
+Using the Tempo commands
+Offsetting the tempo map
+Setting the project tempo from an audio recording
+Setting the project tempo from freely recorded MIDI or audio
+Aligning measure/beat boundaries manually
+Backwards compatibility
+
+427
+
+BandLab library import/export
+
+429
+431
+435
+
+Publishing to BandLab
+Importing from BandLab
+Inviting collaborators
+
+437
+
+Arranging and editing
+
+438
+441
+448
+453
+456
+460
+467
+470
+471
+472
+475
+476
+478
+484
+484
+485
+486
+487
+488
+489
+489
+494
+495
+496
+496
+497
+498
+502
+503
+504
+504
+505
+506
+510
+510
+512
+513
+513
+513
+515
+515
+518
+519
+520
+522
+523
+524
+
+Arranger tracks
+Arranger tracks
+Arranger Inspector
+Defining sections of your song
+Section types
+Editing sections
+Creating arrangements
+Navigating by Arranger sections
+Exporting arrangements
+Arranger templates
+Arranging tracks
+Changing the order of tracks
+Inserting tracks
+Configuring the display of tracks in the Track view
+Copying tracks
+Erasing tracks
+Working with track templates
+Track icons
+Configuring Track view controls
+Arranging clips
+Displaying clips
+Using the Navigator view
+Opening views by double-clicking clips
+Selecting clips
+Using the Select tool
+Duplicating clips
+Moving and copying clips
+Aim Assist line
+Reverting clip(s) to original time stamp
+Locking Clips
+Auto scroll lock in Clips pane
+Ripple editing
+Clip selection groups
+Nudge
+Nudge settings
+Working with partial clips
+Markers and the snap grid
+Showing grid lines
+Defining and using the Snap Grid
+Snap offsets
+Creating and using markers
+TAB to transients
+Working with linked clips
+Splitting and combining clips
+Take lanes
+Take lane controls
+Using Take lanes
+
+9
+
+527
+528
+528
+528
+530
+531
+532
+534
+535
+543
+545
+546
+548
+549
+552
+553
+554
+554
+556
+556
+556
+559
+562
+563
+564
+
+Clip muting and isolating (clip soloing)
+Toggling a clip’s mute status
+Audition (selection playback)
+Isolating (clip soloing)
+Comping
+Basic comping workflow
+Recording takes
+Auditioning takes
+Comping methods
+Adjusting crossfades
+Comp clips
+Finalizing the comp
+Removing all unused takes and empty Take lanes
+Track folders
+Adding effects in the Track view
+Undo, redo, and the undo history
+Slip-editing (non-destructive editing)
+Using slip-editing
+Slip-editing multiple clips
+Fades and crossfades
+Using fades and crossfades in real-time
+Enhanced editing with keyboard
+Navigating with a keyboard
+Selecting with a keyboard
+Editing with a keyboard
+
+565
+
+Tools
+
+568
+572
+577
+584
+588
+591
+594
+597
+599
+602
+605
+609
+611
+613
+617
+620
+621
+622
+624
+625
+628
+630
+634
+637
+641
+644
+
+Selecting tools
+Selecting the data type to edit
+Smart tool
+Select tool
+Move tool
+Edit tool
+Stretch tool
+Comping tool
+Split tool
+Freehand tool
+Pattern tool
+Line tool
+Pattern tools
+Erase tool
+Mute tool
+Scrub tool
+Zoom tool
+Snap to Grid settings
+Specifying note durations
+Mouse cursors
+Using tools to perform common tasks
+Working with audio clips
+Working with MIDI clips
+Working with MIDI notes
+Working with automation envelopes
+Working with AudioSnap transients
+
+10
+
+647
+652
+654
+658
+661
+663
+666
+668
+670
+672
+674
+676
+678
+680
+682
+684
+686
+688
+
+Control Bar overview
+To scroll the Control Bar
+Export module
+Tools module
+Snap module
+Transport module
+Mix module
+Loop module
+Performance module
+Select module
+Punch module
+Screenset module
+ACT module
+Markers module
+Event Inspector module
+Sync Module
+Custom module
+Mix Recall module
+
+691
+
+Inspectors
+
+695
+696
+707
+708
+713
+715
+
+Track Inspector overview
+Track Inspector controls
+Properties Inspector overview
+Properties Inspector - Clip Properties
+Properties Inspector - Track Properties
+Properties Inspector - Bus Properties
+
+717
+
+Browser
+
+719
+721
+723
+727
+728
+729
+731
+736
+737
+739
+742
+
+Docking/undocking and resizing the Browser window
+Using the Media Browser
+Adding Browser objects to your project
+Using Content Location presets
+Keyboard navigation
+Using the Plug-in Browser
+Adding effects and instruments to a project
+Using FX Chain presets (.fxc)
+Using the Notes Browser
+Using the Synth Rack
+Managing instruments in a project
+
+745
+
+Workspaces
+
+749
+
+Using Workspaces
+
+11
+
+751
+
+AudioSnap
+
+754
+757
+764
+765
+769
+771
+773
+774
+775
+776
+779
+779
+780
+786
+787
+787
+789
+792
+792
+793
+794
+795
+
+Using global tools on AudioSnap transient markers
+Editing transient markers
+Enabling/disabling AudioSnap
+Using the AudioSnap palette
+Synchronizing audio and the project tempo
+Editing a clip’s tempo map
+Changing a project’s tempo
+Fixing timing problems in audio clips
+Adjusting the timing of a solo performance
+Adjusting the timing of a multi-track performance while maintaining phase relationships
+Synchronizing the rhythms of out-of-sync tracks
+Making multiple clips/tracks groove together
+Quantizing audio
+Extracting MIDI timing information from audio
+General editing
+Snapping edits to audio beats
+Splitting beats into clips
+Slip-stretching audio
+Adding automation
+Using the Pool
+Groove Quantize and Quantize to Pool
+Algorithms and rendering
+
+799
+
+Working with loops and Groove Clips
+
+800
+800
+803
+805
+806
+806
+807
+807
+809
+810
+811
+812
+813
+814
+816
+
+The Loop Construction view
+Loop Construction controls
+Using loops with the Browser
+Working with loops
+Working with Groove Clip audio
+How Groove Clips work in Cakewalk
+Using Groove Clips
+Creating and editing Groove Clips
+Editing slices
+Saving Groove Clips as Wave files/ACIDized Wave files
+Using pitch markers in the Track view
+Working with REX files
+MIDI Groove Clips
+Exporting and importing MIDI Groove clips
+Importing Project5 patterns
+
+817
+
+Editing MIDI events and continuous controllers (CC)
+
+819
+820
+821
+821
+821
+821
+822
+822
+823
+831
+832
+
+Event Inspector
+The Piano Roll view
+Note Map pane
+Drum Grid pane
+Notes pane
+Controller pane
+Track pane
+Opening the view
+Working with multiple tracks in the Piano Roll view
+Note names
+Displaying notes and controllers (Piano Roll view only)
+
+12
+
+833
+833
+835
+840
+841
+842
+842
+843
+844
+847
+848
+848
+849
+856
+858
+858
+859
+860
+861
+862
+863
+864
+866
+869
+869
+870
+870
+876
+878
+881
+882
+885
+887
+888
+889
+889
+890
+891
+892
+893
+896
+897
+902
+903
+903
+904
+904
+906
+907
+907
+908
+909
+910
+911
+912
+913
+914
+
+Adding and editing notes in the Piano Roll
+Selecting notes
+Editing notes with the global tools
+Piano Roll view snap resolution
+Show velocity on selected notes (optional)
+Selection sensitive velocity drawing
+Hiding events in muted clips
+Adding and editing controllers in the Piano Roll
+Multiple automation controller lanes
+Adding controllers
+Selecting controllers
+Select controllers within note duration
+MIDI Transform tool
+Piano Roll Microscope mode
+The Inline Piano Roll view
+Displaying the Inline Piano Roll view
+The MIDI scale
+Displaying notes and controllers in the Inline Piano Roll view
+Selecting and editing events
+Copying and pasting MIDI data
+Transposing
+Inserting time or measures into a project
+Stretching and shrinking events
+Reversing notes in a clip
+Adding crescendos and decrescendos
+Changing the timing of a recording
+Quantizing
+Fit Improvisation
+Snap to Scale
+Searching for events
+Event filters
+Controllers, RPNs, NRPNs, and automation data
+The Event List view
+Event List buttons and overview
+Selecting events in the Event List view
+Event List display filter
+Editing events and event parameters
+Additional event information
+Articulation maps
+Using Articulation Maps
+Editing articulations
+The Articulation Map Editor
+Creating an articulation map
+Modifying an existing articulation map
+Importing articulation maps
+Exporting articulation maps
+Applying articulations
+Extracting keyswitch articulations from existing MIDI data
+MIDI effects (MIDI plug-ins)
+MIDI effects presets
+Quantizing
+Adding Echo/Delay
+Filtering events
+Adding Arpeggio
+Analyzing chords
+Changing velocities with the Velocity effect
+Transposing MIDI notes with the Transpose MIDI effect
+13
+
+915
+
+Drum maps and the Drum Grid pane
+
+915
+916
+916
+917
+918
+918
+919
+919
+919
+920
+920
+921
+921
+922
+922
+924
+924
+
+The basics
+Creating and editing a drum map
+The Drum Map Manager
+Working in the Drum Map Manager
+The Map Properties dialog
+Saving a drum map
+Using drum maps
+Assigning a MIDI track to a drum map
+Opening a drum map
+Displaying tracks in the Drum Grid pane
+Velocity tails
+Editing note velocities
+Previewing a mapped sound
+The Note Map pane
+Changing mapped-note settings
+The Drum Grid pane
+Grid lines
+
+925
+
+Editing audio
+
+926
+926
+926
+928
+930
+930
+931
+931
+932
+933
+933
+933
+935
+936
+937
+938
+938
+939
+940
+940
+941
+942
+944
+944
+944
+
+Digital audio fundamentals
+Basic acoustics
+Example—a guitar string
+Waveforms
+Recording a sound
+The decibel scale
+Audio clips
+Managing audio data
+Basic audio editing
+Editing clip properties
+Moving, copying, pasting and deleting audio clips
+Audio scaling
+Splitting audio clips
+Bouncing to clips
+Scrubbing
+Basic audio processing
+Using the Normalize and Gain commands
+Reversing audio data
+Advanced audio processing
+Removing silence
+Removing DC offset
+Applying fades and crossfades offline
+Audio effects (audio plug-ins)
+Real-time audio effects processing
+Destructive audio effects processing
+
+14
+
+945
+
+Software instruments
+
+946
+947
+948
+952
+954
+955
+955
+957
+957
+957
+958
+959
+960
+960
+960
+960
+961
+961
+962
+962
+963
+964
+964
+965
+965
+966
+970
+970
+971
+
+Synth Rack
+Synth tracks
+Inserting soft synths
+Using instrument tracks
+Opening a soft synth’s property page
+Synth Rack icons
+Playing a soft synth
+Muting and soloing soft synth tracks
+Rename synths in the Synth Rack view
+Multi-port soft synths
+Converting your soft synth tracks to audio
+Using the Assignable Controls feature
+Automating controls from the Synth Rack
+Displaying Synth Rack automation
+Remote control of the Synth Rack
+Drawing soft synth automation in the Clips pane
+Soft synth MIDI output support
+Recording a soft synth’s MIDI output
+ReWire
+ReWire instruments
+Inserting a ReWire instrument
+Routing MIDI data to ReWire instruments
+Mixing down ReWire instruments
+Automating ReWire instruments
+ReWire troubleshooting guide
+Soft synth audio recording
+Stand-alone synths
+Playing a stand-alone synth
+Recording a stand-alone synth
+
+973
+
+Mixing
+
+974
+975
+978
+978
+979
+980
+982
+982
+983
+985
+986
+988
+1000
+1000
+1001
+1002
+1003
+1004
+1004
+1005
+
+Preparing to mix
+Configuring the Console and Track views
+Mixing MIDI
+Mixing a MIDI track
+Converting MIDI to audio
+Signal flow
+Sidechaining signal flow
+Routing and mixing digital audio
+Buses
+Hardware outs
+Insert Send Assistant
+Patch points
+Metering
+What the meters measure
+Hiding and showing meters
+Changing the meters’ display
+Segmented and non-segmented meters
+Changing the meters’ performance
+MIDI activity indicators
+Peak markers
+15
+
+1006
+1006
+1009
+1010
+1012
+1012
+1015
+1017
+1018
+1020
+1022
+1026
+1027
+1031
+1034
+1035
+1036
+1039
+1041
+1041
+1042
+1044
+1046
+1047
+1047
+1050
+1052
+1055
+
+Waveform preview for buses and synth tracks
+Freeze tracks and synths
+Using real-time effects
+Plug-in upsampling on bounce/freeze/export
+Effects parameters
+How to use real-time effects
+Presets and property pages
+Bypassing effects globally
+Effects on clips
+Sidechaining
+External Insert plug-in
+Effects chains
+Using FX Chain presets
+Using assignable controls
+Customizing the FX Chain UI
+Organizing plug-ins
+VST configuration
+Using the per-track EQ
+Applying audio effects
+Applying MIDI effects
+Using control groups
+Quick Groups
+Using remote control
+Using the Learn option
+Bouncing tracks
+Real-time bounce
+Mix Recall
+Using Mix Scenes
+
+1063
+
+Surround Mixing
+
+1063
+1064
+1064
+1066
+1067
+1067
+1068
+1069
+1070
+1074
+1074
+1075
+1075
+1076
+1076
+1077
+1077
+1077
+1079
+
+Surround basics
+Configuring Cakewalk for surround mixing
+Using surround format templates
+Choosing a surround format
+Surround buses
+Routing in surround
+Downmixing
+Panning in surround
+Controlling surround panning
+Automating surround panning
+Joystick support
+Surround metering
+Bass management
+Surround effects
+The SurroundBridge
+Effect property pages
+Effect presets
+How to patch and configure surround effects
+Importing surround mixes
+
+16
+
+1081
+1085
+1091
+1095
+1097
+1099
+1104
+1105
+1109
+1110
+1113
+1119
+1121
+1124
+1126
+1127
+1128
+1129
+1130
+1131
+1132
+
+ProChannel
+Using ProChannel
+ProChannel modules and controls
+PC76 U-Type Channel Compressor module
+PC4K S-Type Bus Compressor module
+QuadCurve Equalizer module
+Tube Saturation module
+PC2A T-Type Leveling Amplifier
+Softube Saturation Knob
+Console Emulator module
+FX Chain module
+Tape Emulator module
+REmatrix Solo convolution reverb
+GRIT (saturation) module
+MAX (volume maximizer) module
+SPACE (reverb/ambience) module
+SMOOTHER (de-esser / de-harsher) module
+GATER (remove noise) module
+DEPTH (chorus / stereo shaping) module
+PULSE (tremolo) module
+SHAPER (transient control) module
